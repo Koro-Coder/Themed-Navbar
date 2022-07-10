@@ -1,6 +1,7 @@
 import React from "react"
+import Theme from "./theme"
 
-export default function Navbar(){
+export default function Navbar(props){
     return(
     <nav class="navbar">
       <ul class="navbar-nav">
@@ -9,19 +10,8 @@ export default function Navbar(){
 
         <li class="nav-item">About</li>
 
-        <li class="nav-item has-dropdown">
-          <a href="#">Theme</a>
-          <ul class="dropdown">
-            <li class="dropdown-item">
-              <a id="light" href="#">light</a>
-            </li>
-            <li class="dropdown-item">
-              <a id="dark" href="#">dark</a>
-            </li>
-            <li class="dropdown-item">
-              <a id="solar" href="#">solarize</a>
-            </li>
-          </ul>
+        <li class="nav-item ">
+          <Theme switchTheme={props.switchTheme}  switchSolar={props.switchSolar}/>
         </li>
 
         <li class="nav-item">Login</li>
